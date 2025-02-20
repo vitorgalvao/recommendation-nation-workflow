@@ -291,6 +291,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C1B41BEB-8E51-41DE-AFD8-8F021C22B46F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>083A0EA3-D864-48E0-BFF4-9FA492247E56</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C1B92374-D5FB-40A4-8E11-90103AC80298</key>
 		<array>
 			<dict>
@@ -433,6 +446,18 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>C1B41BEB-8E51-41DE-AFD8-8F021C22B46F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>4DA3603F-C455-4026-A8D0-5627FE1F0F2B</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>DFBD5AFC-47AC-4160-8A83-DA8462A91DEF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -557,6 +582,58 @@
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>skipuniversalaction</key>
+				<true/>
+				<key>subtext</key>
+				<string>What made it stand out?</string>
+				<key>text</key>
+				<string>Reason</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>8CFD0664-03BF-4054-8237-4F1EBDE6CE57</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"title":"Movie","arg":"movie","subtitle":""},{"title":"Series","arg":"series"},{"title":"Music","arg":"music"},{"title":"Book","arg":"book"},{"title":"Game","arg":"game"},{"title":"Anime","arg":"anime"},{"title":"Manga","arg":"manga"},{"title":"Comic","arg":"comic"},{"title":"Other","arg":"other"}]</string>
+				<key>keyword</key>
+				<string>{var:add_keyword}</string>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Add Recommendation</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>3A6935CC-17EC-4DD7-AA1D-F03575470489</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>skipuniversalaction</key>
 				<true/>
@@ -615,58 +692,6 @@ readonly tmp_list="$(mktemp)"
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>fixedorder</key>
-				<false/>
-				<key>items</key>
-				<string>[{"title":"Movie","arg":"movie","subtitle":""},{"title":"Series","arg":"series"},{"title":"Book","arg":"book"},{"title":"Game","arg":"game"},{"title":"Anime","arg":"anime"},{"title":"Manga","arg":"manga"},{"title":"Comic","arg":"comic"},{"title":"Other","arg":"other"}]</string>
-				<key>keyword</key>
-				<string>{var:add_keyword}</string>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Add Recommendation</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.listfilter</string>
-			<key>uid</key>
-			<string>3A6935CC-17EC-4DD7-AA1D-F03575470489</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>skipuniversalaction</key>
-				<true/>
-				<key>subtext</key>
-				<string>What made it stand out?</string>
-				<key>text</key>
-				<string>Reason</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>8CFD0664-03BF-4054-8237-4F1EBDE6CE57</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>skipuniversalaction</key>
@@ -721,26 +746,6 @@ readonly tmp_list="$(mktemp)"
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{var:reason}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>person</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>80E14E7C-FDDA-469C-9D2A-A03DDA3F04E6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
 				<string>{var:title}</string>
 				<key>passthroughargument</key>
 				<false/>
@@ -774,6 +779,26 @@ readonly tmp_list="$(mktemp)"
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>39C016E6-A2DF-4AD7-94AF-52BA677F1AC8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:reason}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>person</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>80E14E7C-FDDA-469C-9D2A-A03DDA3F04E6</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -834,14 +859,6 @@ readonly tmp_list="$(mktemp)"
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>E0264073-1BE0-4227-A98D-4B196E67B77B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
@@ -871,6 +888,14 @@ readonly tmp_list="$(mktemp)"
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
 			<string>FD394ED9-786A-45AE-BF8E-43D5F2D7FBCD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>E0264073-1BE0-4227-A98D-4B196E67B77B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -912,31 +937,6 @@ readonly tmp_list="$(mktemp)"
 			<string>7C31F560-0F15-468E-A7E7-5D5C9EE2A9EB</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>readonly list_file="${lists_dir:-${alfred_workflow_data}}/recommendations.csv"
-
-/usr/bin/sed -i '' "${1}d" "${list_file}"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>309A3903-936E-4B4A-8A32-C7C3AA7EFF69</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1021,6 +1021,31 @@ fi
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>readonly list_file="${lists_dir:-${alfred_workflow_data}}/recommendations.csv"
+
+/usr/bin/sed -i '' "${1}d" "${list_file}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>309A3903-936E-4B4A-8A32-C7C3AA7EFF69</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -1061,6 +1086,26 @@ fi
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>search_url</key>
+					<string>{var:music_search}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C1B41BEB-8E51-41DE-AFD8-8F021C22B46F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -1090,6 +1135,20 @@ fi
 						<string>Series</string>
 						<key>uid</key>
 						<string>3DD7EB82-8473-415B-8095-A024F70D48E3</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:type}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>music</string>
+						<key>outputlabel</key>
+						<string>Music</string>
+						<key>uid</key>
+						<string>4DA3603F-C455-4026-A8D0-5627FE1F0F2B</string>
 					</dict>
 					<dict>
 						<key>inputstring</key>
@@ -1211,26 +1270,6 @@ fi
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>search_url</key>
-					<string>{var:game_search}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>81CBDEC1-7B58-4CC3-9C29-5EBED3663C69</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>skipqueryencode</key>
@@ -1263,6 +1302,26 @@ fi
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>2DF2251E-4365-404D-A485-BC10E67E329A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>search_url</key>
+					<string>{var:game_search}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>81CBDEC1-7B58-4CC3-9C29-5EBED3663C69</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1350,7 +1409,7 @@ fi
 	<key>readme</key>
 	<string>## Usage
 
-Add movies, books, games, and more to a list via the `recadd` keyword. A category and title are required, but the recommender and why it was iteresting to you are optional.
+Add movies, music, books, games, and more to a list via the `recadd` keyword. A category and title are required, but the recommender and why it was iteresting to you are optional.
 
 ![Adding new category](images/about/addtype.png)
 
@@ -1377,7 +1436,7 @@ Search through your list with the `recview` keyword.
 			<key>xpos</key>
 			<real>860</real>
 			<key>ypos</key>
-			<real>905</real>
+			<real>940</real>
 		</dict>
 		<key>13AB3EAF-06AA-4420-99E4-D4C43CD25E2E</key>
 		<dict>
@@ -1391,14 +1450,14 @@ Search through your list with the `recview` keyword.
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>725</real>
+			<real>745</real>
 		</dict>
 		<key>198FFB03-176F-4528-8B34-950433159083</key>
 		<dict>
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>785</real>
+			<real>805</real>
 		</dict>
 		<key>22A116E5-E2F7-4899-B29F-B03127D2E186</key>
 		<dict>
@@ -1419,7 +1478,7 @@ Search through your list with the `recview` keyword.
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>935</real>
+			<real>985</real>
 		</dict>
 		<key>309A3903-936E-4B4A-8A32-C7C3AA7EFF69</key>
 		<dict>
@@ -1456,7 +1515,7 @@ Search through your list with the `recview` keyword.
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>1145</real>
+			<real>1225</real>
 		</dict>
 		<key>5A5DD384-A433-4E6D-8751-8AF58FCF3275</key>
 		<dict>
@@ -1477,7 +1536,7 @@ Search through your list with the `recview` keyword.
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>1025</real>
+			<real>1105</real>
 		</dict>
 		<key>7C31F560-0F15-468E-A7E7-5D5C9EE2A9EB</key>
 		<dict>
@@ -1498,7 +1557,7 @@ Search through your list with the `recview` keyword.
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>905</real>
+			<real>985</real>
 		</dict>
 		<key>8CFD0664-03BF-4054-8237-4F1EBDE6CE57</key>
 		<dict>
@@ -1521,6 +1580,13 @@ Search through your list with the `recview` keyword.
 			<key>ypos</key>
 			<real>325</real>
 		</dict>
+		<key>C1B41BEB-8E51-41DE-AFD8-8F021C22B46F</key>
+		<dict>
+			<key>xpos</key>
+			<real>510</real>
+			<key>ypos</key>
+			<real>865</real>
+		</dict>
 		<key>C1B92374-D5FB-40A4-8E11-90103AC80298</key>
 		<dict>
 			<key>xpos</key>
@@ -1533,7 +1599,7 @@ Search through your list with the `recview` keyword.
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>1085</real>
+			<real>1165</real>
 		</dict>
 		<key>D67B8F7C-1D60-4834-AB6A-931A63E50BB6</key>
 		<dict>
@@ -1554,7 +1620,7 @@ Search through your list with the `recview` keyword.
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>845</real>
+			<real>925</real>
 		</dict>
 		<key>E0264073-1BE0-4227-A98D-4B196E67B77B</key>
 		<dict>
@@ -1575,14 +1641,14 @@ Search through your list with the `recview` keyword.
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>965</real>
+			<real>1045</real>
 		</dict>
 		<key>F4C935F0-2D11-4899-B774-BD8456175DA3</key>
 		<dict>
 			<key>xpos</key>
 			<real>375</real>
 			<key>ypos</key>
-			<real>835</real>
+			<real>870</real>
 		</dict>
 		<key>FD394ED9-786A-45AE-BF8E-43D5F2D7FBCD</key>
 		<dict>
@@ -1712,6 +1778,32 @@ Search through your list with the `recview` keyword.
 			<string>popupbutton</string>
 			<key>variable</key>
 			<string>series_search</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>https://bandcamp.com/search?q=</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Bandcamp</string>
+						<string>https://bandcamp.com/search?q=</string>
+					</array>
+					<array>
+						<string>Discogs</string>
+						<string>https://www.discogs.com/search?q=</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Music</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>music_search</string>
 		</dict>
 		<dict>
 			<key>config</key>
