@@ -6,7 +6,7 @@ Track recommendations of media to watch, read, play
 
 ## Usage
 
-Add movies, books, games, and more to a list via the `recadd` keyword. A category and title are required, but the recommender and why it was iteresting to you are optional.
+Add movies, music, books, games, and more to a list via the `recadd` keyword. A category and title are required, but the recommender and why it was iteresting to you are optional.
 
 ![Adding new category](Workflow/images/about/addtype.png)
 
